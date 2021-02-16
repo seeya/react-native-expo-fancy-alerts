@@ -44,8 +44,8 @@ const styles = StyleSheet.create({
   },
 });
 
-const FancyAlert = ({ visible, onRequestClose, icon, children, style }) => (
-  <Modal visible={visible} animationType="fade" transparent onRequestClose={onRequestClose}>
+const FancyAlert = ({ visible, supportedOrientations, onRequestClose, icon, children, style }) => (
+  <Modal visible={visible} animationType="fade" transparent supportedOrientations={supportedOrientations} onRequestClose={onRequestClose}>
     <View style={styles.container}>
       <View style={[styles.iconCircle, { top: 32, borderColor: style.backgroundColor }]}>
         {icon}
